@@ -6,4 +6,4 @@ cache:
 
 script:
   - echo "UwU"
-  - mvn -f /monopoly/pom.xml clean test
+  - mvn -f monopoly/pom.xml clean test
