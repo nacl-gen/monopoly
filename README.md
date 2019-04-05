@@ -6,7 +6,7 @@ This project implement the two first iteration example of case iteration from th
 
 ## utility
 
-Do an iteration case 
+Do an iteration case .
 
 ## Problem 
 
