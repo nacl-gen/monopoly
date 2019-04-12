@@ -50,10 +50,11 @@ class DieTest {
             die1.roll();
             die2.roll();
             if (die1.getFaceValue() != die2.getFaceValue()) {
+                assertTrue(true);
                 return;
             }
         }
-        assertNotEquals(die1.getFaceValue(), die2.getFaceValue());
+        fail();
     }
 
 
