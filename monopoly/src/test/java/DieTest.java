@@ -4,18 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DieTest {
 
-    class PipedDice extends Die {
-
-        @Override
-        public void roll() {
-            setFaceValue();
-        }
-
-        private void setFaceValue() {
-            faceValue = 3;
-        }
-    }
-
     /**
      * carfull this test have 1 chance on 10'000'000'0000 to return a "faulse
      * asset faillure" cause of unlyckiness
@@ -23,8 +11,7 @@ class DieTest {
     @Test
     void resultMustbebetwen() {
         Die die = new Die();
-        boolean fail = false;
-
+        
         int i = 1;
         while (i <= 6) {
             for (int j = 0; j < 1000; j++) {
@@ -56,6 +43,5 @@ class DieTest {
         }
         fail();
     }
-
 
 }
