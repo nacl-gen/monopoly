@@ -11,7 +11,7 @@ class DieTest {
     @Test
     void resultMustbebetwen() {
         Die die = new Die();
-        
+
         int i = 1;
         while (i <= 6) {
             for (int j = 0; j < 1000; j++) {
