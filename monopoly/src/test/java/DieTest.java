@@ -5,11 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class DieTest {
 
     /**
-     * carfull this test have 1 chance on 10'000'000'0000 to return a "faulse
-     * asset faillure" cause of unlyckiness
+     * this test can possibly fail (REALLY UNLIKELY) and return a "false
+     * assert failure" if a face (1..6) is not return in it's 1000 tries because of randomness
      */
     @Test
-    void resultMustbebetwen() {
+    void resultMustBeBetween() {
         Die die = new Die();
 
         int i = 1;
@@ -26,7 +26,8 @@ class DieTest {
     }
 
     /**
-     * this test has little chance to product false positive
+     * this test can possibly fail (REALLY UNLIKELY) if the two series of 100 values are the same
+     * by randomness
      */
     @Test
     void twoDieMustHaveDifferentSeed() {
@@ -36,12 +37,12 @@ class DieTest {
         for (int i = 0; i < 100; i++) {
             die1.roll();
             die2.roll();
-            if (die1.getFaceValue() != die2.getFaceValue()) {
-                assertTrue(true);
+
+            if(die1.getFaceValue() != die2.getFaceValue()) {
                 return;
             }
         }
+
         fail();
     }
-
 }
