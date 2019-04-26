@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Die {
     protected int faceValue;
+
     //simule un aléatoire
     private final static Random rand = new Random(System.currentTimeMillis());
 
