@@ -3,14 +3,14 @@ public enum Piece {
     THIMBLE("Thimble"),
     HAT("Hat"),
     SHOES("Shoes"),
-    CAR("car"),
-    IRON("iron"),
+    CAR("Car"),
+    IRON("Iron"),
     BOOT("Boot"),
     CAT("Cat");
 
     private String name;
     private Square location;
-    private boolean disponibility=false;
+    private boolean disponibility=true;
 
     Piece(String name) {
         this.name = name;
@@ -18,8 +18,8 @@ public enum Piece {
 
     public static Piece takePiece() {
         for (Piece piece : Piece.values()){
-            if (!piece.disponibility){
-                piece.disponibility=true;
+            if (piece.disponibility){
+                piece.disponibility=false;
                 return piece;
             }
         }
@@ -32,10 +32,6 @@ public enum Piece {
 
     public Square getLocation() {
         return location;
-    }
-
-    public void realsePiece(){
-        disponibility=false;
     }
 
     @Override

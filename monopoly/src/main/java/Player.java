@@ -4,16 +4,16 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-       this.piece = Piece.takePiece();
+        this.piece = Piece.takePiece();
     }
 
-    public void takeTurn(Die[] die,Board board){
-        int total=0;
-        for (Die dice : die){
-            dice.roll();
-            total+= dice.faceValue;
+    public void takeTurn(Die[] dice, Board board) {
+        int total = 0;
+        for (Die die : dice) {
+            die.roll();
+            total += die.faceValue;
         }
-        
+
     }
 
 }
