@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Board {
    private Square[] squares = new Square[40];
 
@@ -10,8 +8,6 @@ public class Board {
         for (int i = 1; i < 40; ++i) {
             squares[i] = new Square("Square " + i);
         }
-
-        System.out.println(squares);
     }
 
 

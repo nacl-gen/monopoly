@@ -1,6 +1,5 @@
 public class MonopolyGame {
 
-    private int numberOfPlayers;
     private Player[] players;
     private int roundCount;
 
@@ -13,7 +12,6 @@ public class MonopolyGame {
             throw new IllegalArgumentException("The number of players must be between 2 and 8");
         }
 
-        this.numberOfPlayers = numberOfPlayers;
         this.players = new Player[numberOfPlayers];
         for(int i = 0; i < numberOfPlayers; ++i) {
             players[i] = new Player("player " + i);
