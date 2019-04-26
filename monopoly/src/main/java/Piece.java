@@ -10,7 +10,7 @@ public enum Piece {
 
     private String name;
     private Square location;
-    private boolean disponibility=true;
+    private boolean availability = true;
 
     Piece(String name) {
         this.name = name;
@@ -18,8 +18,8 @@ public enum Piece {
 
     public static Piece takePiece() {
         for (Piece piece : Piece.values()){
-            if (piece.disponibility){
-                piece.disponibility=false;
+            if (piece.availability){
+                piece.availability = false;
                 return piece;
             }
         }
