@@ -5,10 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class BoardTest {
 
     @Test
-    void getSquareNumber39() {
+    void getSquareNumber() {
         Board board = new Board();
 
-        assertEquals("Square 39", board.getSquare(39).getName());
+        for (int i = 1; i < 40; ++i) {
+            assertEquals("Square " + i, board.getSquare(i).getName());
+        }
     }
 
     @Test
@@ -17,4 +19,6 @@ class BoardTest {
 
         assertEquals("Go", board.getSquare(0).getName());
     }
+
+
 }
