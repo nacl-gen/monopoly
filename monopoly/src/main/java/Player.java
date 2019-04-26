@@ -7,8 +7,13 @@ public class Player {
        this.piece = Piece.takePiece();
     }
 
-    public void takeTurn(){
-
+    public void takeTurn(Die[] die,Board board){
+        int total=0;
+        for (Die dice : die){
+            dice.roll();
+            total+= dice.faceValue;
+        }
+        
     }
 
 }
