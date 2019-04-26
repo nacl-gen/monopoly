@@ -15,10 +15,10 @@ class PieceTest {
     void cannotTakeAPieceIfAlreadyTaken() {
         createSomePlayer();
         for (int i = 0; i < 8; i++) {
-            assertNotEquals(players[i].piece, null);
+            assertNotNull(players[i].piece);
         }
         Player player = new Player("playerOverflow");
-        assertEquals(player.piece, null);
+        assertNull(player.piece);
     }
 
 

@@ -13,7 +13,14 @@ public class Player {
             die.roll();
             total += die.faceValue;
         }
+        System.out.println(name + "got a " + dice[0].getFaceValue() + " and a " + dice[1].getFaceValue() + "\n");
 
+        Square oldLocation = piece.getLocation();
+        Square newLocation = board.getSquare(oldLocation, total);
+
+        piece.setLocation(newLocation);
+
+        System.out.println(name + " is now on : " + piece.getLocation());
     }
 
 }

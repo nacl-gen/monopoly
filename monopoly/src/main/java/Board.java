@@ -3,15 +3,18 @@ public class Board {
 
     public Board(){
 
-        squares[0] = new Square("Go");
+        squares[0] = new Square("Go", 0);
 
         for (int i = 1; i < 40; ++i) {
-            squares[i] = new Square("Square " + i);
+            squares[i] = new Square("Square " + i, i);
         }
     }
 
 
-    public Square getSquare(int position) {
-        return squares[position];
+    public Square getSquare(int number) {
+        return squares[number];
+    }
+    public Square getSquare(Square oldLocation, int advancement) {
+        return squares[(oldLocation.getNumber() + advancement) % 40];
     }
 }
