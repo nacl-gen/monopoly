@@ -6,7 +6,7 @@ class BoardTest {
 
     @Test
     void getSquareNumberAndName() {
-        Board board = new Board();
+        Board board = Board.getInstance();
 
         for (int i = 1; i < 40; ++i) {
             assertEquals("Square " + i, board.getSquare(i).getName());
@@ -16,7 +16,7 @@ class BoardTest {
 
     @Test
     void getSquareGo() {
-        Board board = new Board();
+        Board board = Board.getInstance();
 
         assertEquals("Go", board.getSquare(0).getName());
         assertEquals(0, board.getSquare(0).getNumber());
@@ -24,7 +24,7 @@ class BoardTest {
 
     @Test
     void getSquareNumberWithAdvancement() {
-        Board board = new Board();
+        Board board = Board.getInstance();
 
         Square old0 = new Square("Square 0", 0);
         Square old38 = new Square("Square 38", 38);

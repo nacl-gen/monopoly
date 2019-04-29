@@ -18,7 +18,7 @@ public class MonopolyGame {
         }
 
         this.dice = new Die[]{new Die(), new Die()};
-        this.board = new Board();
+        this.board = Board.getInstance();
         this.roundCount = 0;
     }
 

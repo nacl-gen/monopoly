@@ -1,7 +1,9 @@
 public class Board {
    private Square[] squares = new Square[40];
 
-    public Board(){
+   private static Board instance;
+
+    private Board () {
 
         squares[0] = new Square("Go", 0);
 
@@ -10,6 +12,14 @@ public class Board {
         }
     }
 
+    public static Board getInstance() {
+
+        if (instance == null) {
+            instance = new Board();
+        }
+
+        return instance;
+    }
 
     public Square getSquare(int number) {
         return squares[number];
