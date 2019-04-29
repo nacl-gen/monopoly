@@ -7,7 +7,7 @@ public class Player {
         this.piece = Piece.takePiece();
     }
 
-    public void takeTurn(Die[] dice, Board board) {
+    public void takeTurn(Die[] dice) {
         int total = 0;
         for (Die die : dice) {
             die.roll();
@@ -16,7 +16,7 @@ public class Player {
         System.out.println(name + "got a " + dice[0].getFaceValue() + " and a " + dice[1].getFaceValue() + "\n");
 
         Square oldLocation = piece.getLocation();
-        Square newLocation = board.getSquare(oldLocation, total);
+        Square newLocation = Board.getInstance().getSquare(oldLocation, total);
 
         piece.setLocation(newLocation);
 
