@@ -18,7 +18,7 @@ public class MonopolyGame {
         }
 
         this.dice = new Die[]{new Die(), new Die()};
-        this.board = new Board();
+        this.board = Board.getInstance();
         this.roundCount = 0;
     }
 
@@ -31,7 +31,7 @@ public class MonopolyGame {
 
     private void playRound() {
         for (Player player: players) {
-            player.takeTurn(dice, board);
+            player.takeTurn(dice);
         }
     }
 }
