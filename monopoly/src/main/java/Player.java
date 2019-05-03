@@ -23,4 +23,13 @@ public class Player {
         System.out.println(name + " is now on : " + piece.getLocation());
     }
 
+    public void releasePiece () {
+        Piece.release(this.piece);
+
+        piece = null;
+    }
+
+    public Piece getPiece() {
+        return piece;
+    }
 }
