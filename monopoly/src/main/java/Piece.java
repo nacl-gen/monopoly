@@ -29,8 +29,11 @@ public enum Piece {
     }
 
     public static void release(Piece piece) {
-        if (piece != null)
-        piece.availability = true;
+        if (piece != null) {
+            piece.availability = true;
+            // We have to reset the default place of the Piece
+            piece.setLocation(Board.getInstance().getSquare(0));
+        }
     }
 
     public static void releaseAll() {

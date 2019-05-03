@@ -20,7 +20,7 @@ public class Player {
 
         piece.setLocation(newLocation);
 
-        System.out.println(name + " is now on : " + piece.getLocation());
+        System.out.println(name + " is now on : " + piece.getLocation().getName());
     }
 
     public void releasePiece () {
