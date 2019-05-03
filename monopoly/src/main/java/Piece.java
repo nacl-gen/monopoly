@@ -14,6 +14,8 @@ public enum Piece {
 
     Piece(String name) {
         this.name = name;
+        // Pieces start on Go which is 0
+        this.location = Board.getInstance().getSquare(0);
     }
 
     public static Piece takePiece() {
