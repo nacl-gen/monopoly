@@ -12,6 +12,15 @@ class PieceTest {
     }
 
     @Test
+    void takeAndReleasePiece () {
+
+        Player p = new Player("test");
+        p.releasePiece();
+
+        assertNull(p.getPiece());
+    }
+
+    @Test
     void cannotTakeAPieceIfAlreadyTaken() {
         createSomePlayer();
         for (int i = 0; i < 8; i++) {
@@ -19,6 +28,10 @@ class PieceTest {
         }
         Player player = new Player("playerOverflow");
         assertNull(player.piece);
+
+        for (int i = 0; i < 8; i++) {
+            players[i].releasePiece();
+        }
     }
 
     @Test
