@@ -45,4 +45,24 @@ class PieceTest {
     }
 
 
+    /**
+     * A Rigged Die to perform tests
+     */
+    class RiggedDie extends Die {
+
+        /**
+         * This method allows to change the value of the face manually to rig the die
+         * @param faceValue
+         */
+        void setFaceValue (int faceValue) {
+            this.faceValue = faceValue;
+        }
+
+        @Override
+        public void roll() {
+
+        }
+    }
+
+
 }
