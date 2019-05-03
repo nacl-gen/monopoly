@@ -40,6 +40,8 @@ class PieceTest {
         Piece p = Piece.takePiece();
 
         assertEquals(p.getLocation().getName(), "Go");
+
+        Piece.release(p);
     }
 
 
