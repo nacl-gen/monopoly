@@ -26,6 +26,11 @@ public enum Piece {
         return null;
     }
 
+    public static void release(Piece piece) {
+        if (piece != null)
+        piece.availability = true;
+    }
+
     public void setLocation(Square location) {
         this.location = location;
     }
