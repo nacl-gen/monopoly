@@ -21,5 +21,13 @@ class PieceTest {
         assertNull(player.piece);
     }
 
+    @Test
+    void pieceShouldStartOnGo () {
+
+        Piece p = Piece.takePiece();
+
+        assertEquals(p.getLocation().getName(), "Go");
+    }
+
 
 }
