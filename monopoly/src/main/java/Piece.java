@@ -36,6 +36,13 @@ public enum Piece {
         }
     }
 
+    public static void releaseAll() {
+       for (Piece piece : Piece.values() ){
+           release(piece);
+       }
+    }
+
+
     public void setLocation(Square location) {
         this.location = location;
     }

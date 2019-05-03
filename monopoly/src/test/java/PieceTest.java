@@ -1,9 +1,11 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PieceTest {
     private Player[] players = new Player[8];
+
 
     void createSomePlayer() {
         for (int i = 0; i < 8; ++i) {
@@ -12,7 +14,7 @@ class PieceTest {
     }
 
     @Test
-    void takeAndReleasePiece () {
+    void takeAndReleasePiece() {
 
         Player p = new Player("test");
         p.releasePiece();
@@ -35,7 +37,7 @@ class PieceTest {
     }
 
     @Test
-    void pieceShouldStartOnGo () {
+    void pieceShouldStartOnGo() {
 
         Piece p = Piece.takePiece();
 
@@ -43,6 +45,7 @@ class PieceTest {
 
         Piece.release(p);
     }
+
 
 
     /**
@@ -64,5 +67,9 @@ class PieceTest {
         }
     }
 
-
+    /*realease all piece after test*/
+    @AfterEach
+    void realeasePieces() {
+        Piece.releaseAll();
+    }
 }
