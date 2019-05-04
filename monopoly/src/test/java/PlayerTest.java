@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -5,27 +6,31 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PlayerTest {
 
 
-
     @Test
-    void playerShouldMoveOnBoard () {
+    void playerShouldMoveOnBoard() {
 
         Player player = new Player("TestPlayer");
 
-        RiggedDie d1 = new RiggedDie();
-        RiggedDie d2 = new RiggedDie();
+        Cup.getInstance().getDice()[0] = new RiggedDie();
+        Cup.getInstance().getDice()[1] = new RiggedDie();
 
-        d1.setFaceValue(1);
-        d2.setFaceValue(2);
+        ((RiggedDie) Cup.getInstance().getDice()[0]).setFaceValue(1);
+        ((RiggedDie) Cup.getInstance().getDice()[0]).setFaceValue(2);
 
-        Die[] dice = new Die[]{d1, d2};
-
-        player.takeTurn(dice);
+        player.takeTurn();
 
         assertEquals(player.getPiece().getLocation().getNumber(), 3);
 
         Piece.release(player.getPiece());
 
     }
+
+    @AfterEach
+    void resetTheCup() {
+        Cup.getInstance().getDice()[0] = new Die();
+        Cup.getInstance().getDice()[1] = new Die();
+    }
+
 
     /**
      * A Rigged Die to perform tests
@@ -34,9 +39,10 @@ public class PlayerTest {
 
         /**
          * This method allows to change the value of the face manually to rig the die
+         *
          * @param faceValue
          */
-        void setFaceValue (int faceValue) {
+        void setFaceValue(int faceValue) {
             this.faceValue = faceValue;
         }
 
@@ -45,4 +51,6 @@ public class PlayerTest {
 
         }
     }
+
+
 }

@@ -32,4 +32,7 @@ public class Cup {
         return result;
     }
 
+    public Die[] getDice() {
+        return dice;
+    }
 }
