@@ -1,8 +1,21 @@
+/**
+ * Class Player
+ *
+ * Represents a Player in the Monopoly Game
+ *
+ * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
+ * @version 1.0
+ */
 public class Player {
     private String name;
     protected Piece piece;
     private int cash;
 
+    /**
+     * Constructor
+     *
+     * @param name the player's name
+     */
     public Player(String name) {
         this.name = name;
         this.piece = Piece.takePiece();
@@ -13,17 +26,21 @@ public class Player {
         return name;
     }
 
+    /**
+     * take a turn in the game, throw both dice with the cup and move the Player's Piece to the right destination
+     */
     public void takeTurn() {
+        // get the cup instance
         Cup cup = Cup.getInstance();
-        //roll the dice
+        // roll the dice
         cup.roll();
-        //take the total
+        // take the total
         int total = cup.getTotal();
 
-        // System.out.println(name + " is on : " + piece.getLocation().getName());
         System.out.println(name + " got a " + cup.getDice()[0].getFaceValue() + " and a " + cup.getDice()[1].getFaceValue());
 
         Square oldLocation = piece.getLocation();
+        // get new location
         Square newLocation = Board.getInstance().getSquare(oldLocation, total);
 
         // set new location
@@ -35,20 +52,37 @@ public class Player {
         System.out.println(name + " is now on : " + piece.getLocation().getName() + "\n");
     }
 
+    /**
+     * release the Player's Piece (make it available)
+     */
     public void releasePiece() {
         Piece.release(this.piece);
 
         piece = null;
     }
 
+    /**
+     * @return the Player's Piece
+     */
     public Piece getPiece() {
         return piece;
     }
 
+    /**
+     * Give cash to the Player
+     *
+     * @param cash the amount to give
+     */
     public void addCash(int cash) {
         this.cash += cash;
     }
 
+    /**
+     * Take cash from the Player
+     *
+     * @param cash the amount we want to take
+     * @return true if the player's amount was enough to pay
+     */
     public boolean reduceCash(int cash) {
         if (this.cash > cash) {
             this.cash -= cash;
@@ -59,8 +93,10 @@ public class Player {
 
     }
 
+    /**
+     * @return the player's cash amount
+     */
     public int getNetWorth() {
         return cash;
     }
-
 }
