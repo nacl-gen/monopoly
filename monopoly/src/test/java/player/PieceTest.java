@@ -1,7 +1,6 @@
 package player;
 
 import die.Die;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -54,7 +53,8 @@ class PieceTest {
     }
 
     @ParameterizedTest
-    @EnumSource(Piece.class)// passing all piece
+    @EnumSource(Piece.class)
+// passing all piece
     void allPiecesCanBeRealease(Piece piece) {
         Piece.release(piece);
         assertTrue(piece.availability);
