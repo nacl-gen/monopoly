@@ -1,6 +1,7 @@
 public class Player {
     private String name;
     protected Piece piece;
+    private int cash;
 
     public Player(String name) {
         this.name = name;
@@ -34,4 +35,23 @@ public class Player {
     public Piece getPiece() {
         return piece;
     }
+
+    public void addCash(int cash) {
+        this.cash += cash;
+    }
+
+    public boolean reduceCash(int cash) {
+        if (this.cash > cash) {
+            this.cash -= cash;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public int getNetWorth() {
+        return cash;
+    }
+
 }

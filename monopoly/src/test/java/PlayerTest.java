@@ -31,6 +31,19 @@ public class PlayerTest {
         Cup.getInstance().getDice()[1] = new Die();
     }
 
+    @Test
+    void playerCanReceiveAndSpendMoney() {
+
+        Player player = new Player("TestPlayer");
+
+        player.addCash(200);
+        assertEquals(player.getNetWorth(), 200);
+        assertFalse(player.reduceCash(300));
+        assertTrue(player.reduceCash(100));
+        assertEquals(player.getNetWorth(), 100);
+
+    }
+
 
     /**
      * A Rigged Die to perform tests
@@ -50,6 +63,5 @@ public class PlayerTest {
         public void roll() {
         }
     }
-
 
 }
