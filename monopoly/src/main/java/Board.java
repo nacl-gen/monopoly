@@ -5,10 +5,15 @@ public class Board {
 
     private Board () {
 
-        squares[0] = new Square("Go", 0);
+        squares[0] = new GoSquare();
+        squares[4] = new IncomeTaxSquare();
+        squares[9] = new RegularSquare("Jail", 9);
+        squares[29] = new GoToJailSquare();
 
         for (int i = 1; i < 40; ++i) {
-            squares[i] = new Square("Square " + i, i);
+            if(i != 4 && i != 9 && i != 29) {
+                squares[i] = new RegularSquare("Square " + i, i);
+            }
         }
     }
 

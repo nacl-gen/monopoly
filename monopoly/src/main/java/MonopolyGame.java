@@ -13,8 +13,9 @@ public class MonopolyGame {
         }
 
         this.players = new Player[numberOfPlayers];
-        for(int i = 1; i <= numberOfPlayers; ++i) {
-            players[i - 1] = new Player("player " + i);
+        for(int i = 0; i < numberOfPlayers; ++i) {
+            players[i] = new Player("player " + (i + 1));
+            players[i].addCash(1500);
         }
 
         this.dice = new Die[]{new Die(), new Die()};

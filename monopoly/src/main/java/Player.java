@@ -8,6 +8,11 @@ public class Player {
         this.piece = Piece.takePiece();
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public void takeTurn(Die[] dice) {
         int total = 0;
         for (Die die : dice) {
@@ -20,7 +25,11 @@ public class Player {
         Square oldLocation = piece.getLocation();
         Square newLocation = Board.getInstance().getSquare(oldLocation, total);
 
+        // set new location
         piece.setLocation(newLocation);
+
+        // perform action "landedOn" on the new square
+        newLocation.landedOn(this);
 
         System.out.println(name + " is now on : " + piece.getLocation().getName() + "\n");
     }
