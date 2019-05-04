@@ -30,4 +30,4 @@ The program can be run with no arguments to start a game with 4 players or by gi
 
 [Travis CI - Getting StartedURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960707)
 
-[JUnit 5 - User's GuideURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960709)
+[JUnit 5 - User's GuideURL](https://junit.org/junit5/docs/current/user-guide/)
