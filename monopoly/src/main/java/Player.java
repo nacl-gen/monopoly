@@ -13,14 +13,15 @@ public class Player {
         return name;
     }
 
-    public void takeTurn(Die[] dice) {
-        int total = 0;
-        for (Die die : dice) {
-            die.roll();
-            total += die.faceValue;
-        }
+    public void takeTurn() {
+        Cup cup = Cup.getInstance();
+        //roll the dice
+        cup.roll();
+        //take the total
+        int total = cup.getTotal();
+
         // System.out.println(name + " is on : " + piece.getLocation().getName());
-        System.out.println(name + " got a " + dice[0].getFaceValue() + " and a " + dice[1].getFaceValue());
+        System.out.println(name + " got a " + cup.getDice()[0].getFaceValue() + " and a " + cup.getDice()[1].getFaceValue());
 
         Square oldLocation = piece.getLocation();
         Square newLocation = Board.getInstance().getSquare(oldLocation, total);
