@@ -13,12 +13,9 @@ public class JailSquare extends RegularSquare {
         }
     }
 
-    public static Square createJailSquare(int number) throws Exception {
-        if (instance != null){
-            instance = new JailSquare(number);
-        } else {
-            throw new Exception("Jail square already set up");
-        }
+    public static Square createJailSquare(int number) {
+        instance = new JailSquare(number);
+
         return instance;
     }
 }
