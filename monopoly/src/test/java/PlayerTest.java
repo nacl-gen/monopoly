@@ -15,7 +15,7 @@ public class PlayerTest {
         Cup.getInstance().getDice()[1] = new RiggedDie();
 
         ((RiggedDie) Cup.getInstance().getDice()[0]).setFaceValue(1);
-        ((RiggedDie) Cup.getInstance().getDice()[0]).setFaceValue(2);
+        ((RiggedDie) Cup.getInstance().getDice()[1]).setFaceValue(2);
 
         player.takeTurn();
 
@@ -48,7 +48,6 @@ public class PlayerTest {
 
         @Override
         public void roll() {
-
         }
     }
 
