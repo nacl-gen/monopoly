@@ -1,4 +1,4 @@
-package Player;
+package player;
 
 import die.Cup;
 import die.Die;

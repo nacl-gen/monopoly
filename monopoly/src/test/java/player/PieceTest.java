@@ -1,10 +1,11 @@
-package Player;
+package player;
 
 import die.Die;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import player.Piece;
-import player.Player;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -72,9 +73,12 @@ class PieceTest {
         }
     }
 
-    /*realease all piece after test*/
+    @ParameterizedTest
     @AfterEach
-    void realeasePieces() {
-        Piece.releaseAll();
+    @EnumSource(Piece.class)// passing all piece
+    void getValueForAMonth_IsAlwaysBetweenOneAndTwelve(Piece piece) {
+        Piece.release(piece);
+        assertFalse(piece.availability);
     }
+
 }
