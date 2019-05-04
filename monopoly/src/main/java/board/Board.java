@@ -1,6 +1,10 @@
+package board;
+
+import board.squares.*;
+
 /**
- * Class Board
- *
+ * Class board.Board
+ * <p>
  * Represents a simplified monopoly board
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
@@ -18,22 +22,22 @@ public class Board {
     private Board() {
         // Go square (start square)
         squares[0] = new GoSquare();
-        // Income Tax Square
+        // Income Tax board.squares.Square
         squares[4] = new IncomeTaxSquare();
-        // Jail Square
+        // Jail board.squares.Square
         squares[9] = JailSquare.createJailSquare(9);
-        // Go To Jail Square
+        // Go To Jail board.squares.Square
         squares[29] = new GoToJailSquare();
 
         for (int i = 1; i < 40; ++i) {
             if (i != 4 && i != 9 && i != 29) {
-                squares[i] = new RegularSquare("Square " + i, i);
+                squares[i] = new RegularSquare("board.squares.Square " + i, i);
             }
         }
     }
 
     /**
-     * @return Board instance
+     * @return board.Board instance
      */
     public static Board getInstance() {
 
@@ -45,17 +49,17 @@ public class Board {
     }
 
     /**
-     * @param number of the Square
-     * @return the Square with the given number
+     * @param number of the board.squares.Square
+     * @return the board.squares.Square with the given number
      */
     public Square getSquare(int number) {
         return squares[number];
     }
 
     /**
-     * @param oldLocation the old Square where the Piece was located
-     * @param advancement the advancement of the Piece
-     * @return the new Square computed from the old Square + advancement
+     * @param oldLocation the old board.squares.Square where the player.Piece was located
+     * @param advancement the advancement of the player.Piece
+     * @return the new board.squares.Square computed from the old board.squares.Square + advancement
      */
     public Square getSquare(Square oldLocation, int advancement) {
         return squares[(oldLocation.getNumber() + advancement) % 40];

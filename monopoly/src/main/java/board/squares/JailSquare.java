@@ -1,7 +1,9 @@
+package board.squares;
+
 /**
- * Class JailSquare
- *
- * Represents the Jail Square of the Board
+ * Class board.squares.JailSquare
+ * <p>
+ * Represents the Jail board.squares.Square of the board.Board
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0
@@ -11,14 +13,15 @@ public class JailSquare extends RegularSquare {
 
     /**
      * Constructor
-     * @param number the Jail Square number on the Board
+     *
+     * @param number the Jail board.squares.Square number on the board.Board
      */
     private JailSquare(int number) {
         super("Jail", number);
     }
 
     /**
-     * @return the JailSquare instance
+     * @return the board.squares.JailSquare instance
      */
     public static JailSquare getInstance() {
         if (instance == null) {
@@ -29,8 +32,8 @@ public class JailSquare extends RegularSquare {
     }
 
     /**
-     * @param number the Jail Square number on the Board
-     * @return a new JailSquare instance
+     * @param number the Jail board.squares.Square number on the board.Board
+     * @return a new board.squares.JailSquare instance
      */
     public static Square createJailSquare(int number) {
         instance = new JailSquare(number);

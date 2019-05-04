@@ -1,7 +1,11 @@
+package board.squares;
+
+import player.Player;
+
 /**
- * Class IncomeTaxSquare
- *
- * Represents the Income Tax Square of the Board
+ * Class board.squares.IncomeTaxSquare
+ * <p>
+ * Represents the Income Tax board.squares.Square of the board.Board
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0

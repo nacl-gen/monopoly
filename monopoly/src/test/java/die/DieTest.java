@@ -1,12 +1,15 @@
+package die;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class DieTest {
 
     /**
-     * this test can possibly fail (REALLY UNLIKELY) and return a "false
-     * assert failure" if a face (1..6) is not return in it's 1000 tries because of randomness
+     * this test can possibly fail (REALLY UNLIKELY) and return a "false assert failure"
+     * if a face (1..6) is not return in it's 1000 tries because of randomness
      */
     @Test
     void resultMustBeBetween() {
@@ -38,7 +41,7 @@ class DieTest {
             die1.roll();
             die2.roll();
 
-            if(die1.getFaceValue() != die2.getFaceValue()) {
+            if (die1.getFaceValue() != die2.getFaceValue()) {
                 return;
             }
         }

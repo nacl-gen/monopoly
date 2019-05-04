@@ -1,15 +1,17 @@
+package die;
+
 import java.util.Random;
 
 /**
- * Class Die
+ * Class die.Die
  *
- * Represents a 6 faces Die
+ * Represents a 6 faces die.Die
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0
  */
 public class Die {
-    // upper face of the Die (the one we see on top when it has been rolled)
+    // upper face of the die.Die (the one we see on top when it has been rolled)
     protected int faceValue;
 
     // Random generator
@@ -18,14 +20,14 @@ public class Die {
     /**
      * Constructor
      *
-     * Rolls the Die on creation
+     * Rolls the die.Die on creation
      */
-    Die() {
+    public Die() {
         roll();
     }
 
     /**
-     * Rolls the Die, sets a new random face value (int between 1 and 6)
+     * Rolls the die.Die, sets a new random face value (int between 1 and 6)
      */
     public void roll() {
         faceValue = rand.nextInt(6) + 1;

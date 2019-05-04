@@ -1,7 +1,9 @@
+package die;
+
 /**
- * Class Cup
+ * Class die.Cup
  *
- * Represents a Cup of 2 Dice
+ * Represents a die.Cup of 2 Dice
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0
@@ -23,7 +25,7 @@ public class Cup {
     }
 
     /**
-     * @return the Cup instance
+     * @return the die.Cup instance
      */
     static public Cup getInstance() {
         if (instance == null) {

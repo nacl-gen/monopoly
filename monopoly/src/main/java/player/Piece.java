@@ -1,5 +1,10 @@
+package player;
+
+import board.Board;
+import board.squares.Square;
+
 /**
- * Enum Piece
+ * Enum player.Piece
  *
  * Represents the playable pieces
  *
@@ -23,7 +28,7 @@ public enum Piece {
 
     /**
      * Constructor
-     * @param name the name of the Piece
+     * @param name the name of the player.Piece
      */
     Piece(String name) {
         this.name = name;
@@ -32,7 +37,7 @@ public enum Piece {
     }
 
     /**
-     * @return the next available Piece, or null if they are all taken
+     * @return the next available player.Piece, or null if they are all taken
      */
     public static Piece takePiece() {
         for (Piece piece : Piece.values()) {
@@ -51,7 +56,7 @@ public enum Piece {
     public static void release(Piece piece) {
         if (piece != null) {
             piece.availability = true;
-            // we have to reset the default place of the Piece
+            // we have to reset the default place of the player.Piece
             piece.setLocation(Board.getInstance().getSquare(0));
         }
     }
@@ -66,15 +71,15 @@ public enum Piece {
     }
 
     /**
-     * set the location of the Piece on the Board
-     * @param location the location to set the Piece
+     * set the location of the player.Piece on the board.Board
+     * @param location the location to set the player.Piece
      */
     public void setLocation(Square location) {
         this.location = location;
     }
 
     /**
-     * @return the Piece's current location (Square)
+     * @return the player.Piece's current location (board.squares.Square)
      */
     public Square getLocation() {
         return location;

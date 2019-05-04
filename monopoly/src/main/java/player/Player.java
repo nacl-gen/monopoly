@@ -1,7 +1,13 @@
+package player;
+
+import board.Board;
+import board.squares.Square;
+import die.Cup;
+
 /**
- * Class Player
+ * Class player.Player
  *
- * Represents a Player in the Monopoly Game
+ * Represents a player.Player in the Monopoly Game
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0
@@ -27,7 +33,7 @@ public class Player {
     }
 
     /**
-     * take a turn in the game, throw both dice with the cup and move the Player's Piece to the right destination
+     * take a turn in the game, throw both dice with the cup and move the player.Player's player.Piece to the right destination
      */
     public void takeTurn() {
         // get the cup instance
@@ -53,7 +59,7 @@ public class Player {
     }
 
     /**
-     * release the Player's Piece (make it available)
+     * release the player.Player's player.Piece (make it available)
      */
     public void releasePiece() {
         Piece.release(this.piece);
@@ -62,14 +68,14 @@ public class Player {
     }
 
     /**
-     * @return the Player's Piece
+     * @return the player.Player's player.Piece
      */
     public Piece getPiece() {
         return piece;
     }
 
     /**
-     * Give cash to the Player
+     * Give cash to the player.Player
      *
      * @param cash the amount to give
      */
@@ -78,7 +84,7 @@ public class Player {
     }
 
     /**
-     * Take cash from the Player
+     * Take cash from the player.Player
      *
      * @param cash the amount we want to take
      * @return true if the player's amount was enough to pay
