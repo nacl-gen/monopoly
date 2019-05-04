@@ -1,8 +1,8 @@
-public class Square {
+public abstract class Square {
     private String name;
     private int number;
 
-    Square(String name, int number){
+    public Square(String name, int number){
         this.name = name;
         this.number = number;
     }
@@ -13,5 +13,7 @@ public class Square {
     public int getNumber() {
         return number;
     }
+
+    public abstract void landedOn(Player player);
 }
 

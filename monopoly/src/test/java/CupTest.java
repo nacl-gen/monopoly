@@ -6,7 +6,7 @@ class CupTest {
 
 
     @Test
-    void CupCanReturnAllValueBetwenTwoAndTwelfe() {
+    void CupCanReturnAllValueBetweenTwoAndTwelve() {
         Cup cup = Cup.getInstance();
         boolean[] hasBeenReturn = new boolean[11];
         for (int i = 0; i < 1000000; i++) {
