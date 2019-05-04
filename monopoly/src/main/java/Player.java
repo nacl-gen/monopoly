@@ -13,14 +13,15 @@ public class Player {
             die.roll();
             total += die.faceValue;
         }
-        System.out.println(name + "got a " + dice[0].getFaceValue() + " and a " + dice[1].getFaceValue() + "\n");
+        // System.out.println(name + " is on : " + piece.getLocation().getName());
+        System.out.println(name + " got a " + dice[0].getFaceValue() + " and a " + dice[1].getFaceValue());
 
         Square oldLocation = piece.getLocation();
         Square newLocation = Board.getInstance().getSquare(oldLocation, total);
 
         piece.setLocation(newLocation);
 
-        System.out.println(name + " is now on : " + piece.getLocation().getName());
+        System.out.println(name + " is now on : " + piece.getLocation().getName() + "\n");
     }
 
     public void releasePiece () {

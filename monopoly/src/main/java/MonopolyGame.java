@@ -13,17 +13,19 @@ public class MonopolyGame {
         }
 
         this.players = new Player[numberOfPlayers];
-        for(int i = 0; i < numberOfPlayers; ++i) {
-            players[i] = new Player("player " + i);
+        for(int i = 1; i <= numberOfPlayers; ++i) {
+            players[i - 1] = new Player("player " + i);
         }
 
         this.dice = new Die[]{new Die(), new Die()};
         this.board = Board.getInstance();
-        this.roundCount = 0;
+        this.roundCount = 1;
     }
 
     public void playGame() {
-        while(roundCount < 20) {
+        while(roundCount <= 20) {
+
+            System.out.println("======== Round " + roundCount + " ========\n");
             playRound();
             ++roundCount;
         }
@@ -32,6 +34,35 @@ public class MonopolyGame {
     private void playRound() {
         for (Player player: players) {
             player.takeTurn(dice);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int numberOfPlayers = 4;
+
+        if(args.length == 0) {
+
+            try {
+                MonopolyGame mg = new MonopolyGame(numberOfPlayers);
+                mg.playGame();
+            } catch (IllegalArgumentException ex) {
+                System.out.println(ex.getMessage());
+            }
+
+        } else if(args.length == 1) {
+            try {
+                numberOfPlayers = Integer.valueOf(args[0]);
+                MonopolyGame mg = new MonopolyGame(numberOfPlayers);
+                mg.playGame();
+
+            } catch (NumberFormatException ex) {
+                System.out.println("The number of players must be an integer between 2 and 8");
+            } catch (IllegalArgumentException ex) {
+                System.out.println(ex.getMessage());
+            }
+        } else {
+            System.out.println("Wrong number of arguments: 1 argument (number of players) or 0 (default number)");
         }
     }
 }
