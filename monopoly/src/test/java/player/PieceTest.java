@@ -55,7 +55,7 @@ class PieceTest {
 
     @ParameterizedTest
     @EnumSource(Piece.class)// passing all piece
-    void getValueForAMonth_IsAlwaysBetweenOneAndTwelve(Piece piece) {
+    void allPiecesCanBeRealease(Piece piece) {
         Piece.release(piece);
         assertTrue(piece.availability);
     }
