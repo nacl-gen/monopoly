@@ -1,3 +1,6 @@
+import Player.Player;
+import board.Board;
+
 public class MonopolyGame {
 
     private Player[] players;

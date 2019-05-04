@@ -1,3 +1,7 @@
+package board;
+
+import board.square.*;
+
 public class Board {
    private Square[] squares = new Square[40];
 
@@ -12,7 +16,7 @@ public class Board {
 
         for (int i = 1; i < 40; ++i) {
             if(i != 4 && i != 9 && i != 29) {
-                squares[i] = new RegularSquare("Square " + i, i);
+                squares[i] = new RegularSquare("board.square.Square " + i, i);
             }
         }
     }

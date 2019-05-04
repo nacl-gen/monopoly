@@ -1,3 +1,5 @@
+package board.square;
+
 public class JailSquare extends RegularSquare {
     private static JailSquare instance;
 
@@ -7,7 +9,7 @@ public class JailSquare extends RegularSquare {
 
     public static JailSquare getInstance() {
         if (instance == null) {
-            throw new NullPointerException("square number not initialise for Jail");
+            throw new NullPointerException("board.square number not initialise for Jail");
         } else {
             return instance;
         }

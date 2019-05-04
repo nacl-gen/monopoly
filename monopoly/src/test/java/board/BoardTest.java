@@ -1,8 +1,14 @@
+package board;
+
+import board.square.GoSquare;
+import board.square.RegularSquare;
+import board.square.Square;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTest {
+
 
     @Test
     void getSquareNumberAndName() {
@@ -22,7 +28,7 @@ class BoardTest {
                 assertEquals("Go To Jail", board.getSquare(29).getName());
                 assertEquals(29, board.getSquare(29).getNumber());
             } else {
-                assertEquals("Square " + i, board.getSquare(i).getName());
+                assertEquals("board.square.Square " + i, board.getSquare(i).getName());
                 assertEquals(i, board.getSquare(i).getNumber());
             }
         }
@@ -41,13 +47,13 @@ class BoardTest {
         Board board = Board.getInstance();
 
         Square old0 = new GoSquare();
-        Square old38 = new RegularSquare("Square 38", 38);
+        Square old38 = new RegularSquare("board.square.Square 38", 38);
 
         // normal case
-        assertEquals(board.getSquare(old0, 10).getName(), "Square 10");
+        assertEquals(board.getSquare(old0, 10).getName(), "board.square.Square 10");
         // (38 + 2) % 40 = 0 (Go)
         assertEquals(board.getSquare(old38, 2).getName(), "Go");
         // (38 + 3) % 40 = 1
-        assertEquals(board.getSquare(old38, 3).getName(), "Square 1");
+        assertEquals(board.getSquare(old38, 3).getName(), "board.square.Square 1");
     }
 }

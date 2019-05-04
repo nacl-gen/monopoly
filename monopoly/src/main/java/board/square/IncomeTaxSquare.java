@@ -1,3 +1,7 @@
+package board.square;
+
+import Player.*;
+
 public class IncomeTaxSquare extends Square {
 
     public IncomeTaxSquare() {

@@ -1,3 +1,7 @@
+package board.square;
+
+import Player.Player;
+
 public class GoSquare extends Square {
 
     public GoSquare() {

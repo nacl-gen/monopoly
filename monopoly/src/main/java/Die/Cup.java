@@ -1,3 +1,4 @@
+package Die;
 
 public class Cup {
     private Die[] dice;

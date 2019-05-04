@@ -1,3 +1,8 @@
+package Player;
+
+import board.Board;
+import board.square.Square;
+
 public enum Piece {
     DOG("Dog"),
     THIMBLE("Thimble"),
@@ -31,7 +36,7 @@ public enum Piece {
     public static void release(Piece piece) {
         if (piece != null) {
             piece.availability = true;
-            // We have to reset the default place of the Piece
+            // We have to reset the default place of the Player.Piece
             piece.setLocation(Board.getInstance().getSquare(0));
         }
     }

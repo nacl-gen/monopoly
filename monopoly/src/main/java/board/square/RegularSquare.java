@@ -1,3 +1,7 @@
+package board.square;
+
+import Player.Player;
+
 public class RegularSquare extends Square {
 
     public RegularSquare(String name, int number) {

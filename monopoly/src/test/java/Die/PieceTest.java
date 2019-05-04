@@ -1,4 +1,8 @@
+package Die;
+
+import Player.*;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,10 +30,10 @@ class PieceTest {
     void cannotTakeAPieceIfAlreadyTaken() {
         createSomePlayer();
         for (int i = 0; i < 8; i++) {
-            assertNotNull(players[i].piece);
+            assertNotNull(players[i].getPiece());
         }
         Player player = new Player("playerOverflow");
-        assertNull(player.piece);
+        assertNull(player.getPiece());
 
         for (int i = 0; i < 8; i++) {
             players[i].releasePiece();
@@ -41,7 +45,7 @@ class PieceTest {
 
         Piece p = Piece.takePiece();
 
-        assertEquals(p.getLocation().getName(), "Go");
+        Assertions.assertEquals(p.getLocation().getName(), "Go");
 
         Piece.release(p);
     }
@@ -49,7 +53,7 @@ class PieceTest {
 
 
     /**
-     * A Rigged Die to perform tests
+     * A Rigged Die.Die to perform tests
      */
     class RiggedDie extends Die {
 

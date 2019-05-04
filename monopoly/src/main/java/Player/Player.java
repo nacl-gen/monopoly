@@ -1,3 +1,9 @@
+package Player;
+
+import Die.Cup;
+import board.Board;
+import board.square.Square;
+
 public class Player {
     private String name;
     protected Piece piece;
@@ -29,7 +35,7 @@ public class Player {
         // set new location
         piece.setLocation(newLocation);
 
-        // perform action "landedOn" on the new square
+        // perform action "landedOn" on the new board.square
         newLocation.landedOn(this);
 
         System.out.println(name + " is now on : " + piece.getLocation().getName() + "\n");

@@ -1,3 +1,7 @@
+package board.square;
+
+import Player.Player;
+
 public abstract class Square {
     private String name;
     private int number;
