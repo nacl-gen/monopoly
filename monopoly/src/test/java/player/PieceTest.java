@@ -1,6 +1,7 @@
 package player;
 
 import die.Die;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -52,6 +53,12 @@ class PieceTest {
         Piece.release(p);
     }
 
+    @ParameterizedTest
+    @EnumSource(Piece.class)// passing all piece
+    void getValueForAMonth_IsAlwaysBetweenOneAndTwelve(Piece piece) {
+        Piece.release(piece);
+        assertTrue(piece.availability);
+    }
 
     /**
      * A Rigged die.Die to perform tests
@@ -73,12 +80,11 @@ class PieceTest {
         }
     }
 
-    @ParameterizedTest
+    /*realease all piece after test*/
     @AfterEach
-    @EnumSource(Piece.class)// passing all piece
-    void getValueForAMonth_IsAlwaysBetweenOneAndTwelve(Piece piece) {
-        Piece.release(piece);
-        assertFalse(piece.availability);
+    void realeasePieces() {
+        Piece.releaseAll();
     }
+
 
 }
