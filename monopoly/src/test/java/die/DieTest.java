@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 class DieTest {
 
     /**
-     * this test can possibly fail (REALLY UNLIKELY) and return a "false
-     * assert failure" if a face (1..6) is not return in it's 1000 tries because of randomness
+     * this test can possibly fail (REALLY UNLIKELY) and return a "false assert failure"
+     * if a face (1..6) is not return in it's 1000 tries because of randomness
      */
     @Test
     void resultMustBeBetween() {
