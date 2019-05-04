@@ -26,9 +26,4 @@ public class MonopolyGameTest {
 
         assertEquals(ex.getMessage(), "The number of players must be between 2 and 8");
     }
-
-
-
-
-    // TODO add tests with right number of players
 }
