@@ -1,21 +1,23 @@
-package Player;
+package player;
 
 import die.Cup;
 import die.Die;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import player.Piece;
-import player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlayerTest {
+class PlayerTest {
+    private Player player;
 
+    @BeforeEach
+    void createPlayer() {
+        this.player = new Player("TestPlayer");
+    }
 
     @Test
     void playerShouldMoveOnBoard() {
-
-        Player player = new Player("TestPlayer");
 
         Cup.getInstance().getDice()[0] = new RiggedDie();
         Cup.getInstance().getDice()[1] = new RiggedDie();
@@ -39,8 +41,6 @@ public class PlayerTest {
 
     @Test
     void playerCanReceiveAndSpendMoney() {
-
-        Player player = new Player("TestPlayer");
 
         player.addCash(200);
         assertEquals(player.getNetWorth(), 200);

@@ -24,7 +24,7 @@ public enum Piece {
     private String name;
     private Square location;
     // piece availability
-    private boolean availability = true;
+    protected boolean availability = true;
 
     /**
      * Constructor
