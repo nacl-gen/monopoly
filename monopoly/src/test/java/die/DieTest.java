@@ -1,5 +1,6 @@
 package die;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,6 +34,7 @@ class DieTest {
      * by randomness
      */
     @Test
+    @RepeatedTest(3)
     void twoDieMustHaveDifferentSeed() {
         Die die1 = new Die();
         Die die2 = new Die();
