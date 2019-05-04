@@ -1,25 +1,28 @@
-# monopoly
+# Monopoly Game
 
-## description
+## Description
 
-This project implement the two first iteration example of case iteration from the book "Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development, Third Edition."
+This project implements the two first iterations example of case iteration from the book "Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development, Third Edition."
 
-## utility
+## Instructions
 
-Do an iteration case .
+The program can be run with no arguments to start a game with 4 players or by giving a number of player in the main arguments (between 2 and 8) to start a game with the given number
 
-## Problem 
+## Gaol
+
+- Implement the two first iteration of the monopoly game (as mentioned in the description)
+- Use the Junit Annotations (with `@`) and the various assertions
+- Use Git, Maven and a configured Travis for the integration
 
 ## members
 
 - Gabrielli Alexandre
 - Povoà Tiago
+- Rouff soit Rueff Christoph
 
-- 
+## usefull links
 
-## lien utile
-
- [Applying UML & Patterns - chapitre 18.5URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960703)
+[Applying UML & Patterns - chapitre 18.5URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960703)
 
 [Applying UML & Patterns - chapitre 23.2URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960705)
 
@@ -28,4 +31,3 @@ Do an iteration case .
 [Travis CI - Getting StartedURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960707)
 
 [JUnit 5 - User's GuideURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960709)
-
