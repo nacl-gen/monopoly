@@ -1,3 +1,5 @@
+import player.Player;
+
 /**
  * Class MonopolyGame
  *

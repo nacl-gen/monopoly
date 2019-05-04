@@ -1,5 +1,10 @@
+package Player;
+
+import die.Die;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import player.Piece;
+import player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,10 +31,10 @@ class PieceTest {
     void cannotTakeAPieceIfAlreadyTaken() {
         createSomePlayer();
         for (int i = 0; i < 8; i++) {
-            assertNotNull(players[i].piece);
+            assertNotNull(players[i].getPiece());
         }
         Player player = new Player("playerOverflow");
-        assertNull(player.piece);
+        assertNull(player.getPiece());
 
         for (int i = 0; i < 8; i++) {
             players[i].releasePiece();
@@ -47,17 +52,17 @@ class PieceTest {
     }
 
 
-
     /**
-     * A Rigged Die to perform tests
+     * A Rigged die.Die to perform tests
      */
     class RiggedDie extends Die {
 
         /**
          * This method allows to change the value of the face manually to rig the die
-         * @param faceValue
+         *
+         * @param faceValue the value we want have
          */
-        void setFaceValue (int faceValue) {
+        void setFaceValue(int faceValue) {
             this.faceValue = faceValue;
         }
 

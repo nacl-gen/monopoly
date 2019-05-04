@@ -1,6 +1,9 @@
+package die;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class DieTest {
 
@@ -38,7 +41,7 @@ class DieTest {
             die1.roll();
             die2.roll();
 
-            if(die1.getFaceValue() != die2.getFaceValue()) {
+            if (die1.getFaceValue() != die2.getFaceValue()) {
                 return;
             }
         }

@@ -1,5 +1,11 @@
+package Player;
+
+import die.Cup;
+import die.Die;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import player.Piece;
+import player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,7 +52,7 @@ public class PlayerTest {
 
 
     /**
-     * A Rigged Die to perform tests
+     * A Rigged die.Die to perform tests
      */
     class RiggedDie extends Die {
 

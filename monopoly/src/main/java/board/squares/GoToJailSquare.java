@@ -1,7 +1,11 @@
+package board.squares;
+
+import player.Player;
+
 /**
- * Class GoToJailSquare
- *
- * Represents the Go to Jail Square of the Board
+ * Class board.squares.GoToJailSquare
+ * <p>
+ * Represents the Go to Jail board.squares.Square of the board.Board
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0

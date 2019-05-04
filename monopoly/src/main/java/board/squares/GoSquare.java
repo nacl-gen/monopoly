@@ -1,7 +1,11 @@
+package board.squares;
+
+import player.Player;
+
 /**
- * Class GoSquare
- *
- * Represents the Go Square of the Board
+ * Class board.squares.GoSquare
+ * <p>
+ * Represents the Go board.squares.Square of the board.Board
  *
  * @author Christoph Rouff soit Rueff, Alexandre Gabrielli, Tiago Povoa
  * @version 1.0
