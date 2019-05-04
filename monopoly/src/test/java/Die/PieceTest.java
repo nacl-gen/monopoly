@@ -51,7 +51,6 @@ class PieceTest {
     }
 
 
-
     /**
      * A Rigged Die.Die to perform tests
      */
@@ -59,9 +58,10 @@ class PieceTest {
 
         /**
          * This method allows to change the value of the face manually to rig the die
+         *
          * @param faceValue
          */
-        void setFaceValue (int faceValue) {
+        void setFaceValue(int faceValue) {
             this.faceValue = faceValue;
         }
 
