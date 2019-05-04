@@ -7,7 +7,7 @@ public class Board {
 
         squares[0] = new GoSquare();
         squares[4] = new IncomeTaxSquare();
-        squares[9] = new RegularSquare("Jail", 9);
+        squares[9] = JailSquare.createJailSquare(9);
         squares[29] = new GoToJailSquare();
 
         for (int i = 1; i < 40; ++i) {

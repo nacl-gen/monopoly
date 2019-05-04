@@ -6,7 +6,7 @@ public class GoToJailSquare extends Square {
 
     @Override
     public void landedOn(Player player) {
-        player.getPiece().setLocation(Board.getInstance().getSquare(9));
+        player.getPiece().setLocation(JailSquare.getInstance());
 
         System.out.println(player + " goes to Jail");
     }
