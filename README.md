@@ -8,7 +8,7 @@ This project implements the two first iterations example of case iteration from 
 
 The program can be run with no arguments to start a game with 4 players or by giving a number of player in the main arguments (between 2 and 8) to start a game with the given number
 
-## Gaol
+## Goal
 
 - Implement the two first iteration of the monopoly game (as mentioned in the description)
 - Use the Junit Annotations (with `@`) and the various assertions
@@ -17,7 +17,7 @@ The program can be run with no arguments to start a game with 4 players or by gi
 ## members
 
 - Gabrielli Alexandre
-- Povoà Tiago
+- Póvoa Tiago
 - Rouff soit Rueff Christoph
 
 ## usefull links
@@ -31,3 +31,4 @@ The program can be run with no arguments to start a game with 4 players or by gi
 [Travis CI - Getting StartedURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960707)
 
 [JUnit 5 - User's GuideURL](https://junit.org/junit5/docs/current/user-guide/)
+
