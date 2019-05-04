@@ -5,9 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PlayerTest {
 
 
-
     @Test
-    void playerShouldMoveOnBoard () {
+    void playerShouldMoveOnBoard() {
 
         Player player = new Player("TestPlayer");
 
@@ -27,6 +26,20 @@ public class PlayerTest {
 
     }
 
+    @Test
+    void playerCanReceiveAndSpendMoney() {
+
+        Player player = new Player("TestPlayer");
+
+        player.addCash(200);
+        assertEquals(player.getNetWorth(), 200);
+        assertFalse(player.reduceCash(300));
+        assertTrue(player.reduceCash(100));
+        assertEquals(player.getNetWorth(), 100);
+
+    }
+
+
     /**
      * A Rigged Die to perform tests
      */
@@ -34,9 +47,10 @@ public class PlayerTest {
 
         /**
          * This method allows to change the value of the face manually to rig the die
+         *
          * @param faceValue
          */
-        void setFaceValue (int faceValue) {
+        void setFaceValue(int faceValue) {
             this.faceValue = faceValue;
         }
 
@@ -45,4 +59,5 @@ public class PlayerTest {
 
         }
     }
+
 }
