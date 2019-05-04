@@ -22,12 +22,12 @@ The program can be run with no arguments to start a game with 4 players or by gi
 
 ## usefull links
 
-[Applying UML & Patterns - chapitre 18.5URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960703)
+[Applying UML & Patterns - chapitre 18.5URL](https://proquest.tech.safaribooksonline.de/book/software-engineering-and-development/uml/0131489062/elaboration-iteration-2-ore-patterns/part04#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTAxMzE0ODkwNjIlMkZjaDE4bGV2MXNlYzYmcXVlcnk9)
 
-[Applying UML & Patterns - chapitre 23.2URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960705)
+[Applying UML & Patterns - chapitre 23.2URL](https://proquest.tech.safaribooksonline.de/book/software-engineering-and-development/uml/0131489062/elaboration-iteration-2-ore-patterns/part04#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTAxMzE0ODkwNjIlMkZjaDIzbGV2MXNlYzMmcXVlcnk9)
 
-[Applying UML & Patterns - chapitre 24.2URL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960706)
+[Applying UML & Patterns - chapitre 24.2URL](https://proquest.tech.safaribooksonline.de/book/software-engineering-and-development/uml/0131489062/elaboration-iteration-2-ore-patterns/part04#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTAxMzE0ODkwNjIlMkZjaDI0bGV2MXNlYzMmcXVlcnk9)
 
-[Travis CI - Getting StartedURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960707)
+[Travis CI - Getting StartedURL](https://travis-ci.org/getting_started)
 
 [JUnit 5 - User's GuideURL](https://cyberlearn.hes-so.ch/mod/url/view.php?id=960709)
