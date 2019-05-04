@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,20 +11,24 @@ public class PlayerTest {
 
         Player player = new Player("TestPlayer");
 
-        RiggedDie d1 = new RiggedDie();
-        RiggedDie d2 = new RiggedDie();
+        Cup.getInstance().getDice()[0] = new RiggedDie();
+        Cup.getInstance().getDice()[1] = new RiggedDie();
 
-        d1.setFaceValue(1);
-        d2.setFaceValue(2);
+        ((RiggedDie) Cup.getInstance().getDice()[0]).setFaceValue(1);
+        ((RiggedDie) Cup.getInstance().getDice()[1]).setFaceValue(2);
 
-        Die[] dice = new Die[]{d1, d2};
-
-        player.takeTurn(dice);
+        player.takeTurn();
 
         assertEquals(player.getPiece().getLocation().getNumber(), 3);
 
         Piece.release(player.getPiece());
 
+    }
+
+    @AfterEach
+    void resetTheCup() {
+        Cup.getInstance().getDice()[0] = new Die();
+        Cup.getInstance().getDice()[1] = new Die();
     }
 
     @Test
@@ -56,7 +61,6 @@ public class PlayerTest {
 
         @Override
         public void roll() {
-
         }
     }
 

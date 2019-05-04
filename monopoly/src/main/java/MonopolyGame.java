@@ -3,7 +3,6 @@ public class MonopolyGame {
     private Player[] players;
     private int roundCount;
 
-    private Die[] dice;
     private Board board;
 
 
@@ -16,8 +15,6 @@ public class MonopolyGame {
         for(int i = 1; i <= numberOfPlayers; ++i) {
             players[i - 1] = new Player("player " + i);
         }
-
-        this.dice = new Die[]{new Die(), new Die()};
         this.board = Board.getInstance();
         this.roundCount = 1;
     }
@@ -33,7 +30,7 @@ public class MonopolyGame {
 
     private void playRound() {
         for (Player player: players) {
-            player.takeTurn(dice);
+            player.takeTurn();
         }
     }
 
